@@ -26,8 +26,8 @@ namespace ejercicio2dejoaquinzampelungherecuperatorio
 			dy = int.Parse(Console.ReadLine());
 			Console.Write($"ingrese el valor de e:");
 			e = int.Parse(Console.ReadLine());
-			
-			if (Math.Pow(ax, 2) != 0 || Math.Pow(by, 2) != 0)
+
+			if (Math.Pow(ax, 2) != 0 && Math.Pow(by, 2) == 0 || Math.Pow(by, 2) != 0 && Math.Pow(ax, 2) == 0)
 			{
 				Console.WriteLine($"es una parabola, ya que uno de los terminos cuadraticos es distinto de cero unicamente:");
 			}
@@ -39,13 +39,13 @@ namespace ejercicio2dejoaquinzampelungherecuperatorio
 				}
 				else
 				{
-					if (Math.Pow(ax, 2) != 0 && Math.Pow(by, 2) != 0 && Math.Pow(ax, 2) != Math.Pow(by, 2) && Math.Pow(ax, 2) < 0 && Math.Pow(by, 2) < 0 || Math.Pow(ax, 2) > 0 && Math.Pow(by, 2) > 0)
+					if (Math.Pow(ax, 2) != 0 && Math.Pow(by, 2) != 0 && Math.Pow(ax, 2) != Math.Pow(by, 2) && (Math.Pow(ax, 2) < 0 && Math.Pow(by, 2) < 0 || Math.Pow(ax, 2) > 0 && Math.Pow(by, 2) > 0))
 					{
 						Console.WriteLine($"se trata de un eclipse, ya que ambos terminos cuadraticos son distintos de cero, diferentes entre si y del mismo signo:");
 					}
 					else
 					{
-						if (Math.Pow(ax, 2) != 0 && Math.Pow(by, 2) != 0 && Math.Pow(ax, 2) != Math.Pow(by, 2) && Math.Pow(ax, 2) < 0 && Math.Pow(by, 2) > 0 || Math.Pow(ax, 2) > 0 && Math.Pow(by, 2) < 0)
+						if (Math.Pow(ax, 2) != 0 && Math.Pow(by, 2) != 0 && Math.Pow(ax, 2) != Math.Pow(by, 2) && (Math.Pow(ax, 2) > 0 && Math.Pow(by, 2) < 0 || Math.Pow(ax, 2) < 0 && Math.Pow(by, 2) > 0))
 						{
 							Console.WriteLine($"se trata de una hiperbola, ya que ambos terminos cuadraticos son distintos de cero, diferentes entre si y de signo contrario:");
 
